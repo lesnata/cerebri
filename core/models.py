@@ -47,9 +47,9 @@ class Quiz(models.Model):
 
     @property
     def score(self):
-        quiz_list_words = self.quiz_list_set.all()
+        quiz_list_words = self.quizlist_set.all()
         correct_answers = len([item for item in quiz_list_words if item.answered])
-        return len
+        return correct_answers
 
 
 
